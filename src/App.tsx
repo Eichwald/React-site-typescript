@@ -1,13 +1,9 @@
 import './App.css';
 import React, { Fragment } from "react";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import { Tabs, Tab, Card } from "@material-ui/core";
 import { useEffect, useState } from 'react';
-import { Post } from './types/types';
-import { Posts } from './hooks/use-queries';
-import { Album } from './types/types';
-import { Albums } from './hooks/use-queries';
-import Card from '@material-ui/core/Card';
+import { Post, Album } from './types/types';
+import { Posts, Albums } from './hooks/use-queries';
 import {
   BrowserRouter as Router,
   Switch,
@@ -74,7 +70,6 @@ function PostsTab() {
 </div>); 
 }
 
-
 function AlbumsTab() {
   const [albums, setAlbums] = useState<Album[]>([]);
   const [isError, setIsError] = useState<boolean>(false);
@@ -104,8 +99,5 @@ function AlbumsTab() {
     </div>
 </div>);
 } 
-
-
-
 export default App;
 
